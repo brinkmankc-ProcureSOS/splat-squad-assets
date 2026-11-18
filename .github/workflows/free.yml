@@ -1,0 +1,18 @@
+name: fetch-free-assets
+on:
+  push:
+    paths: ['tools/fetch_free.py', '.github/workflows/free.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/fetch_free.py
+      - run: du -sh free; find free -type f | head -150
+      - name: Commit
+        run: |
+          git config user.name "splat-bot"; git config user.email "bot@users.noreply.github.com"
+          git add free; git commit -m "Add CC0 textures, HDRIs and Kenney kits" || echo "nothing to commit"; git pull --rebase; git push
