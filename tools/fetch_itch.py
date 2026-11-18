@@ -22,11 +22,18 @@ os.makedirs(out, exist_ok=True)
 for i, up in enumerate(uploads):
     nm = names[i] if i < len(names) else up
     if want and want.lower() not in nm.lower(): continue
-    fb, _ = get(page.rstrip('/') + f'/file/{up}?source=game_download&key={urllib.parse.quote(key, safe="")}', urllib.parse.urlencode({'csrf_token': csrf2}).encode(), {'X-Requested-With': 'XMLHttpRequest'})
-    j = json.loads(fb); print('file resp', str(j)[:300])
-    if 'url' not in j:
-        fb, _ = get(f'https://itch.io/download/{key}/file/{up}' if False else page.rstrip('/') + f'/file/{up}?source=game_download&key={key}&after_download_lightbox=true', urllib.parse.urlencode({'csrf_token': csrf2}).encode(), {'X-Requested-With': 'XMLHttpRequest', 'Referer': dl})
-        j = json.loads(fb); print('file resp2', str(j)[:300])
+    j = {}
+    raw = urllib.parse.unquote(key)
+    for kv in [raw, key, urllib.parse.quote(raw, safe=''), raw.split('.')[0]]:
+        for base in [page.rstrip('/'), 'https://quaternius.itch.io/universal-base-characters']:
+            u = base + '/file/' + up + '?' + urllib.parse.urlencode({'source': 'game_download', 'key': kv})
+            try:
+                fb, _ = get(u, urllib.parse.urlencode({'csrf_token': csrf2}).encode(), {'X-Requested-With': 'XMLHttpRequest', 'Referer': dl, 'Origin': 'https://quaternius.itch.io'})
+                j = json.loads(fb)
+            except Exception as e: j = {'errors': [str(e)]}
+            print('try', kv[:30], str(j)[:120])
+            if 'url' in j: break
+        if 'url' in j: break
     furl = j['url']; print('fetching', nm)
     data, _ = get(furl)
     open(os.path.join(out, 'pack.zip'), 'wb').write(data); print('bytes', len(data))
