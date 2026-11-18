@@ -23,7 +23,11 @@ for i, up in enumerate(uploads):
     nm = names[i] if i < len(names) else up
     if want and want.lower() not in nm.lower(): continue
     fb, _ = get(page.rstrip('/') + f'/file/{up}?source=game_download&key={key}', urllib.parse.urlencode({'csrf_token': csrf2}).encode(), {'X-Requested-With': 'XMLHttpRequest'})
-    furl = json.loads(fb)['url']; print('fetching', nm)
+    j = json.loads(fb); print('file resp', str(j)[:300])
+    if 'url' not in j:
+        fb, _ = get(f'https://itch.io/download/{key}/file/{up}' if False else page.rstrip('/') + f'/file/{up}?source=game_download&key={key}&after_download_lightbox=true', urllib.parse.urlencode({'csrf_token': csrf2}).encode(), {'X-Requested-With': 'XMLHttpRequest', 'Referer': dl})
+        j = json.loads(fb); print('file resp2', str(j)[:300])
+    furl = j['url']; print('fetching', nm)
     data, _ = get(furl)
     open(os.path.join(out, 'pack.zip'), 'wb').write(data); print('bytes', len(data))
     z = zipfile.ZipFile(io.BytesIO(data))
