@@ -11,13 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Download packs from R2 helper and extract model files
-        env:
-          TOKEN: ${{ secrets.UPLOADER_TOKEN }}
         run: |
           mkdir -p packs
           while read -r key dir; do
             [ -z "$key" ] && continue
-            curl -sfL -o /tmp/p.zip "https://splat-art-uploader.brinkman-kc.workers.dev/?key=$key&token=$TOKEN"
+            curl -sfL -o /tmp/p.zip "https://splat-art-uploader.brinkman-kc.workers.dev/?key=$key"
             ls -la /tmp/p.zip
             unzip -l /tmp/p.zip > "packs/$dir.listing.txt"
             mkdir -p "packs/$dir"
