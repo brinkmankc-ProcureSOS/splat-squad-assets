@@ -1,7 +1,7 @@
 name: fetch-packs
 on:
   push:
-    paths: ['packs.txt', 'tools/**', '.github/workflows/fetch.yml']
+    paths: ['packs.txt', '.github/workflows/fetch.yml']
   workflow_dispatch:
 permissions:
   contents: write
@@ -10,16 +10,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Download packs
+      - name: Download packs from R2 helper and extract model files
+        env:
+          TOKEN: ${{ secrets.UPLOADER_TOKEN }}
         run: |
-          while read -r url dir want; do
-            [ -z "$url" ] && continue
-            python3 tools/fetch_itch.py "$url" "packs/$dir" "$want" | tee "packs-$dir.log" || true
+          mkdir -p packs
+          while read -r key dir; do
+            [ -z "$key" ] && continue
+            curl -sfL -o /tmp/p.zip "https://splat-art-uploader.brinkman-kc.workers.dev/?key=$key&token=$TOKEN"
+            ls -la /tmp/p.zip
+            unzip -l /tmp/p.zip > "packs/$dir.listing.txt"
+            mkdir -p "packs/$dir"
+            unzip -o -q /tmp/p.zip '*.glb' '*.gltf' '*.bin' '*.txt' '*.png' -d "packs/$dir" || true
+            rm /tmp/p.zip
           done < packs.txt
-          ls -R packs | head -200
+          find packs -type f | head -100
+          du -sh packs
       - name: Commit
         run: |
           git config user.name "splat-bot"; git config user.email "bot@users.noreply.github.com"
-          git add packs packs-*.log || true
-          git commit -m "Add downloaded CC0 packs" || echo "nothing to commit"
+          git add packs
+          git commit -m "Add extracted CC0 pack files" || echo "nothing to commit"
           git push

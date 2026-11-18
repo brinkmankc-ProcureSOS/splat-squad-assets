@@ -1,1 +1,1 @@
-https://quaternius.itch.io/universal-base-characters universal
+packs/universal-base-characters.zip universal
