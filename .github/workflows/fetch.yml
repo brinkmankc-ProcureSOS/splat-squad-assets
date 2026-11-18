@@ -19,7 +19,7 @@ jobs:
             ls -la /tmp/p.zip
             unzip -l /tmp/p.zip > "packs/$dir.listing.txt"
             mkdir -p "packs/$dir"
-            unzip -o -q /tmp/p.zip '*.glb' '*.gltf' '*.bin' '*.txt' '*.png' -d "packs/$dir" || true
+            unzip -o -q /tmp/p.zip '*.glb' '*.gltf' '*.bin' '*.txt' -d "packs/$dir" || true
             rm /tmp/p.zip
           done < packs.txt
           find packs -type f | head -100

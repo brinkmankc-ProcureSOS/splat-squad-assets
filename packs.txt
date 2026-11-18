@@ -1,1 +1,1 @@
-packs/universal-base-characters.zip universal
+packs/universal-animation-library.zip animations
