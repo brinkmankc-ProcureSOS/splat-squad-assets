@@ -1,0 +1,25 @@
+name: fetch-packs
+on:
+  push:
+    paths: ['packs.txt', 'tools/**', '.github/workflows/fetch.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download packs
+        run: |
+          while read -r url dir want; do
+            [ -z "$url" ] && continue
+            python3 tools/fetch_itch.py "$url" "packs/$dir" "$want" | tee "packs-$dir.log" || true
+          done < packs.txt
+          ls -R packs | head -200
+      - name: Commit
+        run: |
+          git config user.name "splat-bot"; git config user.email "bot@users.noreply.github.com"
+          git add packs packs-*.log || true
+          git commit -m "Add downloaded CC0 packs" || echo "nothing to commit"
+          git push
