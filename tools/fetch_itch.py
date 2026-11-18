@@ -17,15 +17,12 @@ uploads = re.findall(r'data-upload_id="(\d+)"', dhtml)
 names = re.findall(r'class="name"[^>]*title="([^"]+)"', dhtml) or re.findall(r'<strong class="name"[^>]*>([^<]+)<', dhtml)
 print('uploads', uploads, names)
 key = re.search(r'/download/([^?/#"]+)', dl).group(1)
-for m in re.finditer(r'<script[^>]*>(.*?)</script>', dhtml, re.S):
-    t = m.group(1)
-    if 'key' in t or 'Download' in t: print('SCRIPT', t[:600].replace('\n',' '))
 csrf2 = re.search(r'name="csrf_token" value="([^"]+)"', dhtml); csrf2 = csrf2.group(1) if csrf2 else csrf
 os.makedirs(out, exist_ok=True)
 for i, up in enumerate(uploads):
     nm = names[i] if i < len(names) else up
     if want and want.lower() not in nm.lower(): continue
-    fb, _ = get(page.rstrip('/') + f'/file/{up}?source=game_download&key={key}', urllib.parse.urlencode({'csrf_token': csrf2}).encode(), {'X-Requested-With': 'XMLHttpRequest'})
+    fb, _ = get(page.rstrip('/') + f'/file/{up}?source=game_download&key={urllib.parse.quote(key, safe="")}', urllib.parse.urlencode({'csrf_token': csrf2}).encode(), {'X-Requested-With': 'XMLHttpRequest'})
     j = json.loads(fb); print('file resp', str(j)[:300])
     if 'url' not in j:
         fb, _ = get(f'https://itch.io/download/{key}/file/{up}' if False else page.rstrip('/') + f'/file/{up}?source=game_download&key={key}&after_download_lightbox=true', urllib.parse.urlencode({'csrf_token': csrf2}).encode(), {'X-Requested-With': 'XMLHttpRequest', 'Referer': dl})
