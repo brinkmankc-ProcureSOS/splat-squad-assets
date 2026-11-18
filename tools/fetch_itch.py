@@ -17,6 +17,7 @@ uploads = re.findall(r'data-upload_id="(\d+)"', dhtml)
 names = re.findall(r'class="name"[^>]*title="([^"]+)"', dhtml) or re.findall(r'<strong class="name"[^>]*>([^<]+)<', dhtml)
 print('uploads', uploads, names)
 key = re.search(r'/download/([^?/#"]+)', dl).group(1)
+for m in re.finditer(r'.{80}(?:upload_id|key|/file/).{120}', dhtml): print('CTX', m.group(0))
 csrf2 = re.search(r'name="csrf_token" value="([^"]+)"', dhtml); csrf2 = csrf2.group(1) if csrf2 else csrf
 os.makedirs(out, exist_ok=True)
 for i, up in enumerate(uploads):
