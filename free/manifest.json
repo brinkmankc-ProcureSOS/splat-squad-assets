@@ -1,0 +1,250 @@
+{
+ "textures": {
+  "marble_floor": {
+   "id": "marble_01",
+   "files": {
+    "diff": "marble_floor_diff.jpg",
+    "nor": "marble_floor_nor.jpg",
+    "rough": "marble_floor_rough.jpg",
+    "ao": "marble_floor_ao.jpg",
+    "arm": "marble_floor_arm.jpg"
+   }
+  },
+  "polished_concrete": {
+   "id": "concrete_floor_02",
+   "files": {
+    "diff": "polished_concrete_diff.jpg",
+    "nor": "polished_concrete_nor.jpg",
+    "rough": "polished_concrete_rough.jpg",
+    "ao": "polished_concrete_ao.jpg",
+    "arm": "polished_concrete_arm.jpg"
+   }
+  },
+  "wood_floor": {
+   "id": "wood_floor",
+   "files": {
+    "diff": "wood_floor_diff.jpg",
+    "nor": "wood_floor_nor.jpg",
+    "rough": "wood_floor_rough.jpg",
+    "ao": "wood_floor_ao.jpg",
+    "arm": "wood_floor_arm.jpg"
+   }
+  },
+  "tiles": {
+   "id": "floor_tiles_06",
+   "files": {
+    "diff": "tiles_diff.jpg",
+    "nor": "tiles_nor.jpg",
+    "rough": "tiles_rough.jpg",
+    "ao": "tiles_ao.jpg",
+    "arm": "tiles_arm.jpg"
+   }
+  },
+  "plaster": {
+   "id": "painted_plaster_wall",
+   "files": {
+    "diff": "plaster_diff.jpg",
+    "nor": "plaster_nor.jpg",
+    "rough": "plaster_rough.jpg",
+    "ao": "plaster_ao.jpg",
+    "arm": "plaster_arm.jpg"
+   }
+  },
+  "brushed_metal": {
+   "id": "metal_plate",
+   "files": {
+    "diff": "brushed_metal_diff.jpg",
+    "nor": "brushed_metal_nor.jpg",
+    "rough": "brushed_metal_rough.jpg",
+    "ao": "brushed_metal_ao.jpg",
+    "arm": "brushed_metal_arm.jpg"
+   }
+  },
+  "corrugated": {
+   "id": "corrugated_iron",
+   "files": {
+    "diff": "corrugated_diff.jpg",
+    "nor": "corrugated_nor.jpg",
+    "rough": "corrugated_rough.jpg",
+    "ao": "corrugated_ao.jpg",
+    "arm": "corrugated_arm.jpg"
+   }
+  },
+  "asphalt": {
+   "id": "asphalt_02",
+   "files": {
+    "diff": "asphalt_diff.jpg",
+    "nor": "asphalt_nor.jpg",
+    "rough": "asphalt_rough.jpg",
+    "ao": "asphalt_ao.jpg",
+    "arm": "asphalt_arm.jpg"
+   }
+  },
+  "rooftop": {
+   "id": "concrete_tiles_02",
+   "files": {
+    "diff": "rooftop_diff.jpg",
+    "nor": "rooftop_nor.jpg",
+    "rough": "rooftop_rough.jpg",
+    "ao": "rooftop_ao.jpg",
+    "arm": "rooftop_arm.jpg"
+   }
+  },
+  "brick": {
+   "id": "red_brick",
+   "files": {
+    "diff": "brick_diff.jpg",
+    "nor": "brick_nor.jpg",
+    "rough": "brick_rough.jpg",
+    "ao": "brick_ao.jpg",
+    "arm": "brick_arm.jpg"
+   }
+  },
+  "grass": {
+   "id": "grass_path_2",
+   "files": {
+    "diff": "grass_diff.jpg",
+    "nor": "grass_nor.jpg",
+    "rough": "grass_rough.jpg",
+    "ao": "grass_ao.jpg",
+    "arm": "grass_arm.jpg"
+   }
+  },
+  "sand": {
+   "id": "coast_sand_rocks_02",
+   "files": {
+    "diff": "sand_diff.jpg",
+    "nor": "sand_nor.jpg",
+    "rough": "sand_rough.jpg",
+    "ao": "sand_ao.jpg",
+    "arm": "sand_arm.jpg"
+   }
+  },
+  "snow": {
+   "id": "snow_02",
+   "files": {
+    "diff": "snow_diff.jpg",
+    "nor": "snow_nor.jpg",
+    "rough": "snow_rough.jpg",
+    "ao": "snow_ao.jpg",
+    "arm": "snow_arm.jpg"
+   }
+  },
+  "wood_planks": {
+   "id": "wood_planks_grey",
+   "files": {
+    "diff": "wood_planks_diff.jpg",
+    "nor": "wood_planks_nor.jpg",
+    "rough": "wood_planks_rough.jpg",
+    "ao": "wood_planks_ao.jpg",
+    "arm": "wood_planks_arm.jpg"
+   }
+  },
+  "rock": {
+   "id": "rock_face_03",
+   "files": {
+    "diff": "rock_diff.jpg",
+    "nor": "rock_nor.jpg",
+    "rough": "rock_rough.jpg",
+    "ao": "rock_ao.jpg",
+    "arm": "rock_arm.jpg"
+   }
+  },
+  "fabric": {
+   "id": "fabric_pattern_07",
+   "files": {
+    "nor": "fabric_nor.jpg",
+    "rough": "fabric_rough.jpg",
+    "ao": "fabric_ao.jpg",
+    "arm": "fabric_arm.jpg"
+   }
+  },
+  "leather": {
+   "id": "leather_red_02",
+   "files": {
+    "nor": "leather_nor.jpg",
+    "rough": "leather_rough.jpg",
+    "ao": "leather_ao.jpg",
+    "arm": "leather_arm.jpg"
+   }
+  },
+  "carpet": {
+   "id": "dirty_carpet",
+   "files": {
+    "diff": "carpet_diff.jpg",
+    "nor": "carpet_nor.jpg",
+    "rough": "carpet_rough.jpg",
+    "ao": "carpet_ao.jpg",
+    "arm": "carpet_arm.jpg"
+   }
+  },
+  "skatepark_concrete": {
+   "id": "concrete_pavement",
+   "files": {
+    "diff": "skatepark_concrete_diff.jpg",
+    "nor": "skatepark_concrete_nor.jpg",
+    "rough": "skatepark_concrete_rough.jpg",
+    "ao": "skatepark_concrete_ao.jpg",
+    "arm": "skatepark_concrete_arm.jpg"
+   }
+  },
+  "rubber": {
+   "id": "rubber_tiles",
+   "files": {
+    "diff": "rubber_diff.jpg",
+    "nor": "rubber_nor.jpg",
+    "rough": "rubber_rough.jpg",
+    "ao": "rubber_ao.jpg",
+    "arm": "rubber_arm.jpg"
+   }
+  }
+ },
+ "hdri": {
+  "mall": "studio_small_09",
+  "night_city": "dikhololo_night",
+  "dusk": "belfast_sunset_puresky",
+  "day": "clarens_midday",
+  "harbor": "portland_landing_pad",
+  "snow": "snowy_park_01"
+ },
+ "kenney": {
+  "blaster-kit": 44,
+  "city-kit-commercial": 45,
+  "food-kit": 204
+ },
+ "log": [
+  "polyhaven textures 870",
+  "tex marble_floor marble_01 ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex polished_concrete concrete_floor_02 ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex wood_floor wood_floor ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex tiles floor_tiles_06 ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex plaster painted_plaster_wall ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex brushed_metal metal_plate ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex corrugated corrugated_iron ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex asphalt asphalt_02 ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex rooftop concrete_tiles_02 ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex brick red_brick ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex grass grass_path_2 ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex sand coast_sand_rocks_02 ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex snow snow_02 ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex wood_planks wood_planks_grey ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex rock rock_face_03 ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex fabric fabric_pattern_07 ['nor', 'rough', 'ao', 'arm']",
+  "tex leather leather_red_02 ['nor', 'rough', 'ao', 'arm']",
+  "tex carpet dirty_carpet ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex skatepark_concrete concrete_pavement ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "tex rubber rubber_tiles ['diff', 'nor', 'rough', 'ao', 'arm']",
+  "hdri mall studio_small_09",
+  "hdri night_city dikhololo_night",
+  "hdri dusk belfast_sunset_puresky",
+  "hdri day clarens_midday",
+  "hdri harbor portland_landing_pad",
+  "hdri snow snowy_park_01",
+  "kit blaster-kit 44 files from https://opengameart.org/sites/default/files/kenney_blaster-kit_2.1.zip",
+  "kit miss https://opengameart.org/sites/default/files/kenney_furniture-kit.zip HTTP Error 404: Not Found",
+  "kit miss https://opengameart.org/sites/default/files/kenney_furniturekit.zip HTTP Error 404: Not Found",
+  "kit failed furniture-kit",
+  "kit city-kit-commercial 45 files from https://opengameart.org/sites/default/files/kenney_city-kit-commercial_2.1.zip",
+  "kit food-kit 204 files from https://opengameart.org/sites/default/files/kenney_food-kit.zip"
+ ]
+}
