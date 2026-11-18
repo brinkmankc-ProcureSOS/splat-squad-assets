@@ -1,5 +1,6 @@
-download page https://quaternius.itch.io/universal-base-characters/download/eyJpZCI6MzgyMjI1OSwiZXhwaXJlcyI6MTc5NTAzNzA1NX0%3D.i412oM2Wlqj19D9mWIpZoSUh9qs%3D
+download page https://quaternius.itch.io/universal-base-characters/download/eyJpZCI6MzgyMjI1OSwiZXhwaXJlcyI6MTc5NTAzNzExN30%3D.EqdmIC5mNFXvW%2Fwv1cczSY4qw60%3D
 uploads ['15861669'] []
-CTX list_widget base_widget"><div class="upload"><a href="javascript:void(0);" data-upload_id="15861669" class="button download_btn">Download</a><div class="info_column"><div class="upload_name"><strong title="Uni
+SCRIPT <div class="lightbox alt_download_lightbox"><h2>Alternate Download Mode</h2><p>Some regions have been known to block itch.io&#039;s CDN. If your downloads aren&#039;t starting then you can try enabling alternate download mode and trying again.</p><p><label><input class="alt_download_enabled" type="checkbox"/> Enable alternate download mode</label></p><p><a class="close_btn" href="">Close</a></p></div>
+SCRIPT new I.FilterPickers('#game_download_header_3633094');init_GameDownload('#game_download_3608838', {"show_download_lightbox":true,"game":{"actual_price":0,"type_name":"default","slug":"universal-base-characters","min_price":0,"type":1,"id":3822259}});init_Header('#header_2369846', {"autocomplete_props":{"search_url":"https:\/\/itch.io\/search","i18n":{"search_placeholder":"Search for games, jams, tags or creators","search":"Search"},"ca_source":25,"ca_types":{"game":1,"browse_facet":8,"jam":4,"featured_tag":7,"bundle":6},"autocomplete_url":"https:\/\/itch.io\/autocomplete"}}); I.setup_page();
 file resp {'errors': ['invalid key']}
 file resp2 {'errors': ['invalid key']}
