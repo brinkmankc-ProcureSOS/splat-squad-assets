@@ -1,0 +1,38 @@
+{
+ "license": "CC0 1.0 (public domain)",
+ "polyhaven_textures": {
+  "marble_floor": "marble_01",
+  "polished_concrete": "concrete_floor_02",
+  "wood_floor": "wood_floor",
+  "tiles": "floor_tiles_06",
+  "plaster": "painted_plaster_wall",
+  "brushed_metal": "metal_plate",
+  "corrugated": "corrugated_iron",
+  "asphalt": "asphalt_02",
+  "rooftop": "concrete_tiles_02",
+  "brick": "red_brick",
+  "grass": "grass_path_2",
+  "sand": "coast_sand_rocks_02",
+  "snow": "snow_02",
+  "wood_planks": "wood_planks_grey",
+  "rock": "rock_face_03",
+  "fabric": "fabric_pattern_07",
+  "leather": "leather_red_02",
+  "carpet": "dirty_carpet",
+  "skatepark_concrete": "concrete_pavement",
+  "rubber": "rubber_tiles"
+ },
+ "polyhaven_hdri": {
+  "mall": "studio_small_09",
+  "night_city": "dikhololo_night",
+  "dusk": "belfast_sunset_puresky",
+  "day": "clarens_midday",
+  "harbor": "portland_landing_pad",
+  "snow": "snowy_park_01"
+ },
+ "kenney": [
+  "blaster-kit",
+  "food-kit",
+  "city-kit-commercial"
+ ]
+}
