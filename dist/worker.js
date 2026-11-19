@@ -58,7 +58,7 @@ function iconJob(key) {
   let m = key.match(/^icons\/([a-z]+)_([a-z0-9_]+)\.jpg$/); if (m && ICON_CAT[m[1]]) { const extra = ICON_EXTRA[m[1] + '_' + m[2]]; const n = extra || itemName(m[2]); if (!n || m[2] === 'none') return null;
     return { w: 512, h: 512, seed: 11, prompt: ICON_CAT[m[1]](n) + '. ' + ICON_STYLE }; }
   m = key.match(/^posters\/([a-z0-9-]{3,40})\.jpg$/); if (m) { const phrase = m[1].replace(/-/g, ' ').toUpperCase(); if (!HTML.includes("'" + phrase + "'")) return null;
-    return { w: 512, h: 768, seed: 5, prompt: `Vibrant vertical advertising photo for a trendy teen mall store promotion called "${phrase.toLowerCase()}". Stylish product hero shot, colorful studio lighting, magazine ad style, bold composition. No text, no letters, no logos, no watermark.` }; }
+    return { w: 512, h: 768, seed: 5, prompt: `Vibrant vertical fashion magazine photo for a trendy teen mall store, themed around ${phrase.toLowerCase()}. Stylish product hero shot, colorful neon studio lighting, bold composition, clean empty background at the bottom. The image contains absolutely no words, no lettering, no captions, no logos, no watermark.` }; }
   return null;
 }
 const AI_BUSY = new Map();
