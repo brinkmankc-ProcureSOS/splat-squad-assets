@@ -1,0 +1,40 @@
+name: Android build
+on: { workflow_dispatch: {}, push: { tags: ['v*'] } }
+jobs:
+  build:
+    defaults: { run: { working-directory: app } }
+    runs-on: ubuntu-latest
+    env:
+      HAS_KEY: ${{ secrets.ANDROID_KEYSTORE_BASE64 != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm, cache-dependency-path: app/package-lock.json }
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: 21 }
+      - run: npm ci
+      - name: App icon + splash from the live game
+        run: |
+          mkdir -p assets
+          curl -fsSL https://splat-squad.brinkman-kc.workers.dev/art/icons/app_icon.jpg -o assets/icon.jpg
+          cp assets/icon.jpg assets/splash.jpg
+          npx capacitor-assets generate --android --iconBackgroundColor '#0b0820' --splashBackgroundColor '#0b0820'
+      - run: npx cap sync android
+      - name: Decode upload key
+        if: env.HAS_KEY == 'true'
+        run: echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 -d > $RUNNER_TEMP/upload.jks
+      - name: Build AAB (Play Store) + APK (sideload test)
+        working-directory: app/android
+        env:
+          VERSION_CODE: ${{ github.run_number }}
+          ANDROID_KEYSTORE_PATH: ${{ env.HAS_KEY == 'true' && format('{0}/upload.jks', runner.temp) || '' }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: ./gradlew bundleRelease assembleDebug
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hypebeam-android
+          path: |
+            app/android/app/build/outputs/bundle/release/*.aab
+            app/android/app/build/outputs/apk/debug/*.apk

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Hypebeam</string>
+    <string name="title_activity_main">Hypebeam</string>
+    <string name="package_name">com.brinkmanventures.hypebeam</string>
+    <string name="custom_url_scheme">com.brinkmanventures.hypebeam</string>
+</resources>

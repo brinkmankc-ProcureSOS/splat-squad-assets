@@ -1,0 +1,17 @@
+{
+  "appId": "com.brinkmanventures.hypebeam",
+  "appName": "Hypebeam",
+  "webDir": "www",
+  "server": {
+    "url": "https://splat-squad.brinkman-kc.workers.dev/?app=1",
+    "cleartext": false,
+    "errorPath": "offline.html"
+  },
+  "backgroundColor": "#0b0820",
+  "ios": { "contentInset": "never", "allowsLinkPreview": false },
+  "android": { "allowMixedContent": false },
+  "plugins": {
+    "SplashScreen": { "launchShowDuration": 1200, "backgroundColor": "#0b0820", "showSpinner": false },
+    "StatusBar": { "overlaysWebView": true, "style": "DARK" }
+  }
+}
