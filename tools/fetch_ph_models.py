@@ -10,7 +10,7 @@ for kw in KW:
     c = [i for i in ids if kw in i and i not in picked]
     c.sort(key=lambda i: -assets[i].get('download_count', 0))
     picked += c[:2]
-picked = picked[:48]
+picked = [i for i in picked if (assets[i].get('polycount') or 0) < 400000][:44]
 os.makedirs('free/ph', exist_ok=True)
 for mid in picked:
     try:
