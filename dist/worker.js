@@ -29,7 +29,7 @@ const AI_THEME = {
 };
 const AI_TIME = { Day: 'bright midday sun, clear blue sky', Night: 'at night, glowing lights, deep blue night sky with stars', Sunset: 'at sunset, golden hour, orange and purple sky' };
 const AI_FABRIC = {
-  denim: 'denim jeans fabric with a clear diagonal twill weave, faded very light grey wash',
+  denim: 'soft washed denim jeans cloth, subtle fine diagonal twill texture with low contrast, slightly faded and worn, uniform light grey color, like a real pair of jeans',
   camo: 'light grey and white camouflage pattern printed on cotton fabric',
 };
 function aiArtJob(key) {
