@@ -15,6 +15,9 @@ jobs:
           curl -fsSL https://splat-squad.brinkman-kc.workers.dev/art/icons/app_icon.jpg -o assets/icon.jpg
           cp assets/icon.jpg assets/splash.jpg
           npx capacitor-assets generate --ios --iconBackgroundColor '#0b0820' --splashBackgroundColor '#0b0820'
+      - name: Point the app at the game address (repo variable GAME_URL)
+        env: { GAME_URL: "${{ vars.GAME_URL || 'https://splat-squad.brinkman-kc.workers.dev' }}" }
+        run: sed -i.bak "s#https://splat-squad.brinkman-kc.workers.dev#${GAME_URL%/}#g" capacitor.config.json www/index.html www/offline.html && grep -h url capacitor.config.json
       - run: npx cap sync ios
       - name: Write App Store Connect API key
         run: |

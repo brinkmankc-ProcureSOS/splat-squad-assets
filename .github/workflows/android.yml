@@ -19,6 +19,9 @@ jobs:
           curl -fsSL https://splat-squad.brinkman-kc.workers.dev/art/icons/app_icon.jpg -o assets/icon.jpg
           cp assets/icon.jpg assets/splash.jpg
           npx capacitor-assets generate --android --iconBackgroundColor '#0b0820' --splashBackgroundColor '#0b0820'
+      - name: Point the app at the game address (repo variable GAME_URL)
+        env: { GAME_URL: "${{ vars.GAME_URL || 'https://splat-squad.brinkman-kc.workers.dev' }}" }
+        run: sed -i.bak "s#https://splat-squad.brinkman-kc.workers.dev#${GAME_URL%/}#g" capacitor.config.json www/index.html www/offline.html && grep -h url capacitor.config.json
       - run: npx cap sync android
       - name: Decode upload key
         if: env.HAS_KEY == 'true'
@@ -31,7 +34,7 @@ jobs:
           ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
           ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-        run: ./gradlew bundleRelease assembleDebug
+        run: ./gradlew bundleRelease assembleDebug --stacktrace
       - uses: actions/upload-artifact@v4
         with:
           name: hypebeam-android
