@@ -1,0 +1,682 @@
+{
+ "potted_plant_02": {
+  "name": "Potted Plant 02",
+  "tags": [
+   "potplant",
+   "plant",
+   "pot",
+   "vase",
+   "medium",
+   "leaf",
+   "green",
+   "terracotta"
+  ],
+  "polycount": 69806,
+  "kb": 347
+ },
+ "potted_plant_04": {
+  "name": "Potted Plant 04",
+  "tags": [
+   "cactus",
+   "aloe",
+   "succulent",
+   "potplant",
+   "small",
+   "pot",
+   "plant",
+   "decor"
+  ],
+  "polycount": 6097,
+  "kb": 345
+ },
+ "planter_box_01": {
+  "name": "Planter Box 01",
+  "tags": [
+   "old",
+   "wooden",
+   "wood",
+   "farmhouse",
+   "shed",
+   "outdoor",
+   "gardening",
+   "greenhouse",
+   "landscaping",
+   "garden",
+   "farm",
+   "planter",
+   "flower box",
+   "planters"
+  ],
+  "polycount": 8094,
+  "kb": 280
+ },
+ "planter_pot_clay": {
+  "name": "Planter Pot Clay",
+  "tags": [
+   "outdoor",
+   "mossy",
+   "dirty",
+   "used",
+   "worn",
+   "shed",
+   "garden",
+   "gardening",
+   "farmhouse",
+   "greenhouse",
+   "landscaping"
+  ],
+  "polycount": 3080,
+  "kb": 130
+ },
+ "fern_02": {
+  "name": "Fern 02",
+  "tags": [
+   "plant",
+   "fern",
+   "foliage",
+   "jungle",
+   "shrub",
+   "bush",
+   "leaf",
+   "leaves",
+   "green",
+   "nature",
+   "forest",
+   "outdoor"
+  ],
+  "polycount": 6232,
+  "kb": 214
+ },
+ "wild_rooibos_bush": {
+  "name": "Wild Rooibos Bush",
+  "tags": [
+   "karoo",
+   "south africa",
+   "desert",
+   "dried",
+   "dry",
+   "shrub"
+  ],
+  "polycount": 76521,
+  "kb": 519
+ },
+ "jacaranda_tree": {
+  "name": "Jacaranda Tree",
+  "tags": [
+   "tree",
+   "natural",
+   "nature",
+   "green",
+   "plant",
+   "outdoor",
+   "leaf",
+   "botany",
+   "leaves",
+   "forest",
+   "jungle",
+   "foliage",
+   "geometry nodes",
+   "bark",
+   "trunk",
+   "jacaranda"
+  ],
+  "polycount": 312356,
+  "kb": 6645
+ },
+ "bench_vice_01": {
+  "name": "Bench Vice 01",
+  "tags": [
+   "workshop",
+   "garage",
+   "used",
+   "metal",
+   "old",
+   "shed",
+   "woodwork"
+  ],
+  "polycount": 2864,
+  "kb": 235
+ },
+ "painted_wooden_bench": {
+  "name": "Painted Wooden Bench",
+  "tags": [
+   "vintage",
+   "old",
+   "wooden",
+   "worn",
+   "antique",
+   "farmhouse",
+   "aged",
+   "rustic",
+   "small",
+   "seat",
+   "stool"
+  ],
+  "polycount": 630,
+  "kb": 81
+ },
+ "sofa_02": {
+  "name": "Sofa 02",
+  "tags": [
+   "wood",
+   "furniture",
+   "chair",
+   "prop",
+   "couch",
+   "leather",
+   "fabric"
+  ],
+  "polycount": 2728,
+  "kb": 131
+ },
+ "sofa_03": {
+  "name": "Sofa 03",
+  "tags": [
+   "vintage",
+   "chair",
+   "couch",
+   "seat",
+   "fancy",
+   "mansion",
+   "manor",
+   "victorian",
+   "antique",
+   "leather"
+  ],
+  "polycount": 8004,
+  "kb": 246
+ },
+ "chinese_armchair": {
+  "name": "Chinese Armchair",
+  "tags": [
+   "vintage",
+   "antique",
+   "ornate",
+   "chinese",
+   "asian",
+   "varnished",
+   "elegant",
+   "wooden",
+   "traditional"
+  ],
+  "polycount": 2675,
+  "kb": 150
+ },
+ "modern_arm_chair_01": {
+  "name": "Modern Arm Chair 01",
+  "tags": [
+   "wood",
+   "leather",
+   "fancy",
+   "modern",
+   "chair",
+   "contemporary",
+   "wooden",
+   "lounge"
+  ],
+  "polycount": 8916,
+  "kb": 248
+ },
+ "outdoor_table_chair_set_01": {
+  "name": "Outdoor Table Chair Set 01",
+  "tags": [
+   "outdoor",
+   "foldable",
+   "folding",
+   "seating",
+   "coffee",
+   "diner",
+   "street",
+   "urban",
+   "deli",
+   "wood",
+   "city",
+   "cafe"
+  ],
+  "polycount": 9828,
+  "kb": 444
+ },
+ "wooden_table_02": {
+  "name": "Wooden Table 02",
+  "tags": [
+   "wooden",
+   "worn",
+   "village",
+   "rural",
+   "natural",
+   "simple"
+  ],
+  "polycount": 196,
+  "kb": 67
+ },
+ "round_wooden_table_01": {
+  "name": "Round Wooden Table 01",
+  "tags": [
+   "vintage",
+   "wooden",
+   "wood",
+   "polish",
+   "circle",
+   "dark",
+   "old"
+  ],
+  "polycount": 8640,
+  "kb": 214
+ },
+ "street_lamp_01": {
+  "name": "Street Lamp 01",
+  "tags": [
+   "street",
+   "road",
+   "light",
+   "lamppost",
+   "outdoor",
+   "pole",
+   "sidewalk",
+   "night",
+   " urban",
+   "city"
+  ],
+  "polycount": 30610,
+  "kb": 218
+ },
+ "modern_ceiling_lamp_01": {
+  "name": "Modern Ceiling Lamp 01",
+  "tags": [
+   "lighting",
+   "light",
+   "modern",
+   "glass",
+   "round",
+   "hanging",
+   "hanging lamp",
+   "ceiling lamp",
+   "decorative lighting",
+   "modern decor",
+   "interior design"
+  ],
+  "polycount": 5602,
+  "kb": 186
+ },
+ "street_lamp_02": {
+  "name": "Street Lamp 02",
+  "tags": [
+   "street",
+   "road",
+   "light",
+   "lamppost",
+   "outdoor",
+   "pole",
+   "sidewalk",
+   "night",
+   "urban",
+   "city"
+  ],
+  "polycount": 20338,
+  "kb": 238
+ },
+ "wine_barrel_01": {
+  "name": "Wine Barrel 01",
+  "tags": [
+   "barrel",
+   "wine",
+   "celler",
+   "old",
+   "worn",
+   "grape",
+   "farmhouse",
+   "farm"
+  ],
+  "polycount": 10820,
+  "kb": 325
+ },
+ "barrel_03": {
+  "name": "Barrel 03",
+  "tags": [
+   "industrial",
+   "barrel",
+   "oil",
+   "fuel",
+   "truck",
+   "painted",
+   "blue"
+  ],
+  "polycount": 1473,
+  "kb": 121
+ },
+ "wooden_crate_01": {
+  "name": "Wooden Crate 01",
+  "tags": [
+   "vintage",
+   "wood",
+   "old",
+   "wooden",
+   "fancy",
+   "colonial",
+   "chest",
+   "box",
+   "prop",
+   "antique",
+   "farmhouse",
+   "crate",
+   "maritime",
+   "commercial",
+   "container"
+  ],
+  "polycount": 6576,
+  "kb": 256
+ },
+ "wooden_crate_02": {
+  "name": "Wooden Crate 02",
+  "tags": [
+   "vintage",
+   "wood",
+   "old",
+   "wooden",
+   "worn",
+   "colonial",
+   "commercial",
+   "maritime",
+   "chest",
+   "box",
+   "container",
+   "prop",
+   "farmhouse",
+   "crate",
+   "farm"
+  ],
+  "polycount": 5176,
+  "kb": 236
+ },
+ "fire_hydrant": {
+  "name": "Fire Hydrant",
+  "tags": [
+   "city",
+   "urban",
+   "street",
+   "road",
+   "emergency",
+   "valve",
+   "extinguisher",
+   "utility",
+   "municipal",
+   "infrastructure"
+  ],
+  "polycount": 86316,
+  "kb": 272
+ },
+ "metal_trash_can": {
+  "name": "Metal Trash Can",
+  "tags": [
+   "bin",
+   "rubbish",
+   "garbage",
+   "disposal",
+   "litter",
+   "dumpster",
+   "outdoor trash can",
+   " urban",
+   "utility"
+  ],
+  "polycount": 13960,
+  "kb": 423
+ },
+ "trashbag": {
+  "name": "Trashbag",
+  "tags": [
+   "garbage bag",
+   "refuse",
+   "street waste",
+   "trash",
+   "street",
+   "scrapyard",
+   "junkyard",
+   "garbage",
+   "bin",
+   "dumpster",
+   "disposal",
+   "litter",
+   "rubbish"
+  ],
+  "polycount": 4482,
+  "kb": 193
+ },
+ "GothicCabinet_01": {
+  "name": "Gothic Cabinet 01",
+  "tags": [
+   "vintage",
+   "wood",
+   "gothic",
+   "furniture",
+   "table",
+   "shelf",
+   "decorative"
+  ],
+  "polycount": 12170,
+  "kb": 351
+ },
+ "vintage_cabinet_01": {
+  "name": "Vintage Cabinet 01",
+  "tags": [
+   "vintage",
+   "farmhouse",
+   "old",
+   "antique",
+   "fancy",
+   "wooden",
+   "varnished",
+   "cupboard",
+   "shelf",
+   "cabinet"
+  ],
+  "polycount": 61096,
+  "kb": 408
+ },
+ "wooden_bookshelf_worn": {
+  "name": "Wooden Bookshelf Worn",
+  "tags": [
+   "old",
+   "wooden",
+   "wood",
+   "worn",
+   "garage",
+   "shed",
+   "rustic",
+   "antique",
+   "distressed",
+   "aged",
+   "weathered",
+   "bookcase",
+   "shelves",
+   "carpentry",
+   "vintage",
+   "storage"
+  ],
+  "polycount": 10106,
+  "kb": 289
+ },
+ "boombox": {
+  "name": "Boombox",
+  "tags": [
+   "loudspeaker",
+   "radio",
+   "cd player",
+   "stereo",
+   "80's",
+   "sound system",
+   "portable"
+  ],
+  "polycount": 10168,
+  "kb": 363
+ },
+ "tire_pump": {
+  "name": "Tire Pump",
+  "tags": [
+   "shed",
+   "garage",
+   "wheel",
+   "tire",
+   "pump",
+   "inflate",
+   "matress"
+  ],
+  "polycount": 6572,
+  "kb": 237
+ },
+ "old_tyre": {
+  "name": "Old Tyre",
+  "tags": [
+   "wheels",
+   "wheel",
+   "trash",
+   "garbage",
+   "garage",
+   "scrapyard",
+   "junkyard",
+   "abandoned",
+   "automotive",
+   "car",
+   "vehicle"
+  ],
+  "polycount": 2880,
+  "kb": 175
+ },
+ "rock_moss_set_02": {
+  "name": "Rock Moss Set 02",
+  "tags": [
+   "rocks",
+   "outdoor",
+   "stones",
+   "pebbles",
+   "rock",
+   "dirt"
+  ],
+  "polycount": 57647,
+  "kb": 265
+ },
+ "rock_moss_set_01": {
+  "name": "Rock Moss Set 01",
+  "tags": [
+   "rocks",
+   "outdoor",
+   "stones",
+   "pebbles",
+   "rock",
+   "dirt"
+  ],
+  "polycount": 63127,
+  "kb": 233
+ },
+ "boulder_01": {
+  "name": "Boulder 01",
+  "tags": [
+   "rocks",
+   "boulder",
+   "lichen",
+   "landscape",
+   "rock",
+   "geology",
+   "formation",
+   "weathered",
+   "rock face",
+   "cliff"
+  ],
+  "polycount": 123976,
+  "kb": 2298
+ },
+ "namaqualand_boulder_02": {
+  "name": "Namaqualand Boulder 02",
+  "tags": [
+   "karoo",
+   "desert",
+   "south africa",
+   "boulders",
+   "rocks",
+   "geological",
+   "rock",
+   "landscaping"
+  ],
+  "polycount": 183681,
+  "kb": 265
+ },
+ "horse_statue_01": {
+  "name": "Horse Statue 01",
+  "tags": [
+   "decorative",
+   "horse",
+   "statue",
+   "figurine",
+   "porcelain",
+   "animal",
+   "sculpture",
+   "white",
+   "fancy"
+  ],
+  "polycount": 22388,
+  "kb": 314
+ },
+ "concrete_cat_statue": {
+  "name": "Concrete Cat Statue",
+  "tags": [
+   "garden",
+   "outdoor",
+   "landscaping",
+   "gardening",
+   "statue",
+   "concrete",
+   "sculpture",
+   "cat",
+   "lawn decoration"
+  ],
+  "polycount": 11950,
+  "kb": 312
+ },
+ "signal_flashlight": {
+  "name": "Signal Flashlight",
+  "tags": [
+   "handheld",
+   "light",
+   "torch",
+   "signal device",
+   "portable beacon",
+   "emergency signal",
+   "vintage"
+  ],
+  "polycount": 9730,
+  "kb": 245
+ },
+ "tool_cart": {
+  "name": "Tool Cart",
+  "tags": [
+   "rusted",
+   "metal",
+   "cart",
+   "drawer",
+   "rolling",
+   "workshop",
+   "casters",
+   "garage",
+   "workbench"
+  ],
+  "polycount": 29394,
+  "kb": 334
+ },
+ "industrial_storage_cart": {
+  "name": "Industrial Storage Cart",
+  "tags": [
+   "old",
+   "metal",
+   "steel",
+   "container",
+   "garage",
+   "workshop",
+   "rusted",
+   "shed",
+   "rolling",
+   "workbench",
+   "casters"
+  ],
+  "polycount": 18902,
+  "kb": 287
+ }
+}
