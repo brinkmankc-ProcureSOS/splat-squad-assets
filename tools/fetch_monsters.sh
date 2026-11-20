@@ -1,19 +1,22 @@
 #!/bin/bash
-# Download Quaternius "Ultimate Monsters" (CC0) and list it
-set -x
 mkdir -p /tmp/mon && cd /tmp/mon
-curl -sL -A "Mozilla/5.0" https://quaternius.com/packs/ultimatemonsters.html -o page.html; ls -la page.html
-grep -oE 'https?://[^"'"'"' ]+' page.html | grep -iE 'drive|download|zip|itch' | sort -u | tee links.txt
 pip install -q gdown
-for u in $(grep -i drive links.txt); do gdown --folder "$u" -O dl --remaining-ok || gdown --folder "$u" -O dl; done
-find dl -type f | head -50
-for z in $(find dl -iname '*.zip'); do echo "== $z"; unzip -l "$z" | tail -3; done
-mkdir -p x; for z in $(find dl -iname '*.zip' | grep -iE 'gltf|glb'); do unzip -q -o "$z" -d x; done
-[ -z "$(ls x)" ] && for z in $(find dl -iname '*.zip'); do unzip -q -o "$z" -d x; done
-cp -r dl/* x/ 2>/dev/null
-ls -la
-find x -type f | head -300 > $GITHUB_WORKSPACE/free/monsters_listing.txt
-find x -iname '*.gltf' -o -iname '*.glb' | head -80
+python3 - <<'PY'
+import gdown, json, subprocess, os
+items = gdown.download_folder(url='https://drive.google.com/drive/folders/18m4KpzpEzhC9wl7jzr6dUc0N8Jozr79C', skip_download=True, quiet=True)
+sel = [i for i in items if '/glTF/' in i.path]
+print('total', len(items), 'gltf', len(sel))
+os.makedirs('/tmp/mon/x', exist_ok=True)
+lst = []
+for i in sel:
+    sub = i.path.split('/')[0]; name = os.path.basename(i.path); out = f'/tmp/mon/x/{sub}__{name}'
+    url = f'https://drive.usercontent.google.com/download?id={i.id}&export=download&confirm=t'
+    r = subprocess.run(['curl', '-sL', '-A', 'Mozilla/5.0', '-o', out, '-w', '%{http_code} %{size_download}', url], capture_output=True, text=True)
+    print(i.path, r.stdout); lst.append(i.path + ' ' + r.stdout)
+open(os.environ['GITHUB_WORKSPACE'] + '/free/monsters_listing.txt', 'w').write('\n'.join(p.path for p in items))
+PY
 mkdir -p $GITHUB_WORKSPACE/free/monsters_src
-find x \( -iname '*.gltf' -o -iname '*.glb' -o -iname '*.bin' -o -iname '*.png' -o -iname '*.jpg' \) -exec cp {} $GITHUB_WORKSPACE/free/monsters_src/ \;
-ls $GITHUB_WORKSPACE/free/monsters_src | head -100; du -sh $GITHUB_WORKSPACE/free/monsters_src
+# keep folder prefix in name, but gltf references its bin/png by plain name -> copy per folder
+for d in $(ls x | sed 's/__.*//' | sort -u); do mkdir -p $GITHUB_WORKSPACE/free/monsters_src/$d; for f in x/${d}__*; do cp "$f" "$GITHUB_WORKSPACE/free/monsters_src/$d/${f#x/${d}__}"; done; done
+find $GITHUB_WORKSPACE/free/monsters_src -type f | head -80; du -sh $GITHUB_WORKSPACE/free/monsters_src
+head -c 300 $(find $GITHUB_WORKSPACE/free/monsters_src -name '*.gltf' | head -1)
