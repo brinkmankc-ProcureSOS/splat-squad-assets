@@ -1,0 +1,17 @@
+name: fetch-kits
+on:
+  push:
+    paths: ['tools/fetch_kits.sh', '.github/workflows/kits.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: mkdir -p free && bash tools/fetch_kits.sh
+      - name: Commit
+        run: |
+          git config user.name "splat-bot"; git config user.email "bot@users.noreply.github.com"
+          git add free/kits_listing.txt game/kenney; git commit -m "Add Kenney kits (CC0)" || echo "nothing"; git pull --rebase; git push
