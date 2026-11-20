@@ -208,7 +208,7 @@ export default {
       let obj = await env.ART.get(key);
       const src = MODEL_SRC[key] || (key.startsWith('ubc/') ? GH2 + 'game/' + key.slice(4) : /^mon\/[a-z0-9_]+\.glb$/.test(key) ? 'https://cdn.jsdelivr.net/gh/brinkmankc-ProcureSOS/splat-squad-assets@c3e0ede40794e98cc1a4f5efe1865d060b4afd81/game/' + key : null);
       if (!obj && src) { // first request: copy the free KayKit (CC0) character files into R2, then serve from R2 forever
-        const r = await fetch(src); if (!r.ok) return new Response('Not found', { status: 404 });
+        let r = await fetch(src); if (!r.ok && src.includes('cdn.jsdelivr.net/gh/')) { const m = src.match(/cdn\.jsdelivr\.net\/gh\/([^/]+)\/([^@]+)@([^/]+)\/(.*)$/); if (m) r = await fetch(`https://raw.githubusercontent.com/${m[1]}/${m[2]}/${m[3]}/${m[4]}`); } if (!r.ok) return new Response('Not found', { status: 404 });
         const buf = await r.arrayBuffer(); const ct = types[ext] || 'application/octet-stream'; await env.ART.put(key, buf, { httpMetadata: { contentType: ct } });
         return new Response(buf, { headers: { 'content-type': ct, 'cache-control': key.endsWith('.json') ? 'no-cache' : 'public, max-age=86400' } });
       }
